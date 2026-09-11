@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qkr-ini"
+version = "0.1.0"
+description = "Quantum Kernel Clustering + Quantum Knapsack Repair (QKR-INI) for the Capacitated Vehicle Routing Problem"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "QKR-INI authors" }
+]
+keywords = ["quantum computing", "CVRP", "vehicle routing", "QAOA", "quantum kernel", "clustering"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+
+dependencies = [
+    "numpy>=1.23",
+    "pandas>=1.5",
+    "matplotlib>=3.6",
+    "scikit-learn>=1.2",
+    "pennylane>=0.35",
+    "pennylane-lightning>=0.35",
+    "ortools>=9.6",
+    "alns>=6.0",
+    "jinja2>=3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/<org>/qkr-ini"
+Repository = "https://github.com/<org>/qkr-ini"
+
+[project.scripts]
+qkr-ini = "qkr_ini.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
